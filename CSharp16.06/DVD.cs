@@ -36,9 +36,9 @@ namespace CSharp16._06
             throw new NotImplementedException();
         }
 
-        public override double GetFreeMemory(double size)
+        public override double GetFreeMemory()
         {
-            throw new NotImplementedException();
+            return sizeDisk[index] * 1024 - Memory;
         }
 
         public override double GetMemory()

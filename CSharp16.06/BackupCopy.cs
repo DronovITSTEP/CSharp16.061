@@ -9,7 +9,7 @@ namespace CSharp16._06
     {
         private double _sizeBackup;
         private double _sizeFile;
-        private List<Storage> st;
+        //private List<Storage> st;
         public List<Storage> Storages { get; set; }
 
         public BackupCopy(double sBackup, double sFile)
@@ -37,7 +37,8 @@ namespace CSharp16._06
             _sizeBackup = sBackup;
             _sizeFile = sFile;
         }
-        public double GetAllMemory() {
+        public double GetAllMemory()
+        {
             double totalMemory = 0;
             foreach (Storage storage in Storages)
             {
@@ -45,31 +46,38 @@ namespace CSharp16._06
             }
             return totalMemory;
         }
-        public void CopyToDevice() 
+        public void CopyToDevice()
         {
             // возврат строк процесса копирования (использовать рекурсию)
         }
-        public double TimeCopy() {
+        public double TimeCopy()
+        {
             double time = 0;
-            foreach (Storage storage in st)
-            {
-                time += storage.Memory / storage.GetSpeed();
-            }
+            //foreach (Storage storage in st)
+            //{
+            //    time += storage.Memory / storage.GetSpeed();
+           // }
             return time * 2;
         }
-        public int GetCountStorage(int index) {
-            st = new List<Storage>();
+        public int GetCountStorage(int index)
+        {
+            
+            int count = 0;
             double size = _sizeBackup * 1024;
             while (size >= 0)
             {
-                st.Add(Storages[index]);
-                while (st.Last().GetFreeMemory() >= _sizeFile)
+                count++;
+                while (Storages[index].GetFreeMemory() >= _sizeFile)
                 {
-                    st.Last().Memory += _sizeFile;
+                    Storages[index].Memory += _sizeFile;
                     size -= _sizeFile;
-                }                
+                    if (size < 0) break;
+                    Console.WriteLine($"Memory = {Storages[index].Memory}\nSize = {size}\n" +
+                        $"Free Memory = {Storages[index].GetFreeMemory()}");
+                }
+                Storages[index].Memory = 0;
             }
-            return st.Count;
+            return count;
         }
     }
 }

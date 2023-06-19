@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CSharp16._06.Storage">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAACIAAAAQAAAEAAAAAAggAACAAAAA=</HashCode>
+      <FileName>Storage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp16._06.Flash">
+    <Position X="8" Y="5.5" Width="1.5" />
+    <InheritanceLine Type="CSharp16._06.Storage" ManuallyRouted="true">
+      <Path>
+        <Point X="6" Y="3.709" />
+        <Point X="6" Y="4.521" />
+        <Point X="8.75" Y="4.521" />
+        <Point X="8.75" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAgAACAAAAACIAAAAAAAAEAAAAAAAAAACIAAAA=</HashCode>
+      <FileName>Flash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp16._06.DVD">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <InheritanceLine Type="CSharp16._06.Storage" ManuallyRouted="true">
+      <Path>
+        <Point X="6" Y="3.709" />
+        <Point X="6" Y="4.479" />
+        <Point X="3.25" Y="4.479" />
+        <Point X="3.25" Y="5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAACIAAAEIAAAEAAAAACAACAGABAAA=</HashCode>
+      <FileName>DVD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp16._06.HDD">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAEAAAACIAAABAAAAEAEAAAAAAAACAAAAA=</HashCode>
+      <FileName>HDD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp16._06.BackupCopy">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAGAAAAAAAAQAAAAAAAAAAUAAAQAAAAAAAA=</HashCode>
+      <FileName>BackupCopy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.221" />
+  </Class>
+  <Interface Name="CSharp16._06.IBackupCopy">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAGAAAAAAAAAAAAAAAAAAAUAAAQAAAAAAAA=</HashCode>
+      <FileName>IBackupCopy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

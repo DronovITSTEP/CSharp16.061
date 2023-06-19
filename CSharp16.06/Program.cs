@@ -10,6 +10,10 @@ namespace CSharp16._06
     {
         static void Main(string[] args)
         {
+            BackupCopy backupCopy = new BackupCopy(1000, 326);
+            Console.WriteLine(backupCopy.GetCountStorage(0));
+
+            Console.ReadKey();
         }
     }
 }

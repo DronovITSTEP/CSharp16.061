@@ -16,7 +16,7 @@ namespace CSharp16._06
 
         public abstract void CopyToFile();
 
-        public abstract double GetFreeMemory(double size);
+        public abstract double GetFreeMemory();
 
         public abstract string ShowAllInfo();
     }
